@@ -281,10 +281,29 @@ def make_jfile(filename):
     except IOError as e:
         print(f"Error writing to file {filename}: {e}")
 
+def banner():
+    """
+    This function just prints a beautiful banner
+    """
+    mybanner = """ 
+ ███▄    █ ▓█████  ███▄ ▄███▓▓█████   ██████  ██▓  ██████ 
+ ██ ▀█   █ ▓█   ▀ ▓██▒▀█▀ ██▒▓█   ▀ ▒██    ▒ ▓██▒▒██    ▒ 
+▓██  ▀█ ██▒▒███   ▓██    ▓██░▒███   ░ ▓██▄   ▒██▒░ ▓██▄   
+▓██▒  ▐▌██▒▒▓█  ▄ ▒██    ▒██ ▒▓█  ▄   ▒   ██▒░██░  ▒   ██▒
+▒██░   ▓██░░▒████▒▒██▒   ░██▒░▒████▒▒██████▒▒░██░▒██████▒▒
+░ ▒░   ▒ ▒ ░░ ▒░ ░░ ▒░   ░  ░░░ ▒░ ░▒ ▒▓▒ ▒ ░░▓  ▒ ▒▓▒ ▒ ░
+░ ░░   ░ ▒░ ░ ░  ░░  ░      ░ ░ ░  ░░ ░▒  ░ ░ ▒ ░░ ░▒  ░ ░
+   ░   ░ ░    ░   ░      ░      ░   ░  ░  ░   ▒ ░░  ░  ░  
+         ░    ░  ░       ░      ░  ░      ░   ░        ░  
+                                                          
+"""
+    print(mybanner)
+
 def main():
     """
     The main function that displays necessary information.
     """
+    banner() #display the banner
     snames = get_service()  # Getting parameters from the terminal
 
     txtfile = snames.get('txtfile')
